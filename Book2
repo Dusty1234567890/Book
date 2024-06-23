@@ -1,0 +1,97 @@
+local mainbook = Instance.new("ScreenGui")
+mainbook.Name = "SPANISHORENGLISH"
+mainbook.Parent = game.Players.LocalPlayer.PlayerGui
+-- other fucking things
+local fakebook = Instance.new("Frame")
+fakebook.Size = UDim2.new(0.5, 0, 0.8, 0)
+fakebook.Name = "WHOEVERMOVESFIRST"
+fakebook.Position = UDim2.new(0.4, 0, 0.5)
+fakebook.AnchorPoint = Vector2.new(0.5, 0.5)
+fakebook.BackgroundTransparency = 1
+fakebook.Active = true
+fakebook.Parent = mainbook
+-- color of paper
+local skin = Instance.new("ImageLabel")
+skin.Size = UDim2.new(1.01, 0, 1.52, 0)
+skin.BackgroundTransparency = 1
+skin.Parent = fakebook
+skin.Image = "rbxassetid://18172000016"
+local duck = Instance.new("TextButton")
+duck.BackgroundTransparency = 1
+duck.Text = ">"
+duck.Size = UDim2.new(0.1, 0, 0.1)
+duck.Position = UDim2.new(0.92, 0, 0.92)
+duck.TextSize = 20
+local duck2 = Instance.new("TextButton")
+duck2.BackgroundTransparency = 1
+duck2.Text = "<"
+duck2.Size = UDim2.new(0.1, 0, 0.1)
+duck2.Position = UDim2.new(0.01, 0, 0.92)
+duck2.TextSize = 20
+duck2.Parent = fakebook
+duck.Parent = fakebook
+local duck3 = Instance.new("TextButton")
+duck3.Text = ""
+duck3.Size = UDim2.new(0.1, 0, 0.1)
+duck3.Position = UDim2.new(0.5, 0, -0.05)
+duck3.Parent = mainbook
+duck3.BackgroundTransparency = 1
+local button = duck3
+local fakebook2 = fakebook
+mainbook.ResetOnSpawn = false
+button.MouseButton1Click:Connect(function()
+    fakebook2.Visible = not fakebook2.Visible
+end)
+local skin2 = Instance.new("ImageLabel")
+skin2.Size = UDim2.new(1.3, 0, 1.3, 0)
+skin2.BackgroundTransparency = 1
+skin2.Parent = duck3
+skin2.Image = "rbxassetid://18174213658"
+local frame = fakebook
+
+local function FrameVisibilityChanged()
+    if frame.Visible then
+        skin2.Image = "rbxassetid://18174213658" 
+    else
+        skin2.Image = "rbxassetid://18174206450" 
+    end
+end
+
+frame.Changed:Connect(function(property)
+    if property == "Visible" then
+        FrameVisibilityChanged()
+    end
+end)
+local nextButton = duck
+local previousButton = duck2
+local images = {
+    "rbxassetid://18172000016",
+    "rbxassetid://18172964206",
+    "rbxassetid://18172117295",
+    "rbxassetid://18173013100",
+    "rbxassetid://18163973043",
+    "rbxassetid://18173084412",
+    "rbxassetid://18173114671",
+    "rbxassetid://18173145643",
+    "rbxassetid://18173171204",
+    "rbxassetid://18173208214",
+    "rbxassetid://18173234064",
+    "rbxassetid://18173255871",
+    "rbxassetid://18173278315",
+    "rbxassetid://18173299994",
+    "rbxassetid://18173323509",
+    "rbxassetid://18173346644",
+    "rbxassetid://18173448511",
+    "rbxassetid://18173403928",
+}
+local paper = 1
+local function pressnext()
+    paper = (paper % #images) + 1
+    skin.Image = images[paper + 1]
+end
+local function presspervious()
+    paper = (paper % #images) - 1
+    skin.Image = images[paper + 1]
+end
+nextButton.Activated:Connect(pressnext)
+previousButton.Activated:Connect(presspervious)
