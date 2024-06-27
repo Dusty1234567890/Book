@@ -1,0 +1,2354 @@
+local function CustomSendNotification(title, text, icon)
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "NotificationGui"
+    gui.Parent = game.Players.LocalPlayer.PlayerGui
+    local FRAME = Instance.new("Frame")
+    FRAME.Size = UDim2.new(0.4, 0, 0.2, 0)
+    FRAME.Position = UDim2.new(0.7, 0, 0.7, 0)
+    FRAME.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    FRAME.BackgroundTransparency = 0
+    FRAME.Parent = gui
+    local titleTextLabel = Instance.new("TextLabel")
+    titleTextLabel.Size = UDim2.new(0.3, 0, 0.1, 0)
+    titleTextLabel.Position = UDim2.new(-0.09, 0, 0.1, 0)
+    titleTextLabel.Text = title
+    titleTextLabel.Font = Enum.Font.AmaticSC
+    titleTextLabel.TextSize = 35
+    titleTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    titleTextLabel.BackgroundTransparency = 1
+    titleTextLabel.Parent = FRAME
+    local textTextLabel = Instance.new("TextLabel")
+    textTextLabel.Size = UDim2.new(1, 0, 0.5, 0)
+    textTextLabel.Position = UDim2.new(-0.03, 0, 0.3, 0)
+    textTextLabel.Text = text
+    textTextLabel.Font = Enum.Font.AmaticSC
+    textTextLabel.TextSize = 30
+    textTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textTextLabel.BackgroundTransparency = 1
+    textTextLabel.Parent = FRAME
+    if icon then
+        local iconImageLabel = Instance.new("ImageLabel")
+        iconImageLabel.Size = UDim2.new(0.2, 0, 0.7, 0)
+        iconImageLabel.Position = UDim2.new(0, 0, 0.32, 0)
+        iconImageLabel.Image = icon
+iconImageLabel.BackgroundTransparency = 1
+        iconImageLabel.Parent = FRAME
+    end
+    wait(3)
+    FRAME.Transparency = 0.2
+    wait()
+    FRAME.Transparency = 0.4
+    wait()
+    FRAME.Transparency = 0.6
+    wait()
+    FRAME.Transparency = 0.8
+    wait()
+    FRAME.Transparency = 1
+    wait()
+    gui:Destroy()
+end
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+local w = Instance.new
+local color = Color3.new(255, 255, 255)
+local ww = UDim.new(0, 5)
+local mainbook = Instance.new("ScreenGui")
+mainbook.Name = "noidea"
+mainbook.Parent = game.Players.LocalPlayer.PlayerGui
+local sadness = Instance.new("Frame")
+sadness.Size = UDim2.new(0.57, 0, 0.85, 0)
+sadness.Position = UDim2.new(0.2, 0, 0.1)
+sadness.Active = true
+sadness.BackgroundTransparency = 1
+sadness.Parent = mainbook
+local pic = Instance.new("ImageLabel")
+pic.Size = UDim2.new(1, 0, 1, 0)
+pic.BackgroundTransparency = 1
+pic.Image = "rbxassetid://18216511972"
+pic.Parent = sadness
+local scrollingFrame = Instance.new("ScrollingFrame")
+scrollingFrame.BackgroundTransparency = 1
+scrollingFrame.Name = "equipgui"
+scrollingFrame.Size = UDim2.new(0.5, 0, 0.8, 0)
+scrollingFrame.Position = UDim2.new(0.2, 0, 0.1)
+scrollingFrame.Active = true
+scrollingFrame.Parent = mainbook
+local button = Instance.new("TextButton")
+button.Name = "Default"
+button.Text = "Default"
+button.Size = UDim2.new(0.1, 0, 0.06)
+button.Position = UDim2.new(0.01, 0, 0.01)
+button.Parent = scrollingFrame
+local c1 = w('UICorner')
+c1.CornerRadius = ww
+c1.Parent = button
+button.BackgroundTransparency = 0.5
+button.TextColor3 = color
+local spin = Instance.new("TextButton")
+spin.Name = "spin"
+spin.Text = "Spin"
+spin.Size = UDim2.new(0.1, 0, 0.06)
+spin.Position = UDim2.new(0.13, 0, 0.01)
+spin.Parent = scrollingFrame
+local c2 = w('UICorner')
+c2.CornerRadius = ww
+c2.Parent = spin
+spin.BackgroundTransparency = 0.5
+spin.TextColor3 = color
+local dual = Instance.new("TextButton")
+dual.Name = "dual"
+dual.Text = "Dual"
+dual.Size = UDim2.new(0.1, 0, 0.06)
+dual.Position = UDim2.new(0.25, 0, 0.01)
+dual.Parent = scrollingFrame
+local c3 = w('UICorner')
+c3.CornerRadius = ww
+c3.Parent = dual
+dual.BackgroundTransparency = 0.5
+dual.TextColor3 = color
+local diamond = Instance.new("TextButton")
+diamond.Name = "diamond"
+diamond.Text = "Diamond"
+diamond.Size = UDim2.new(0.1, 0, 0.06)
+diamond.Position = UDim2.new(0.37, 0, 0.01)
+diamond.TextSize = 7
+diamond.Parent = scrollingFrame
+local c4 = w('UICorner')
+c4.CornerRadius = ww
+c4.Parent = diamond
+diamond.BackgroundTransparency = 0.5
+diamond.TextColor3 = color
+local zzz = Instance.new("TextButton")
+zzz.Name = "zzz"
+zzz.Text = "zzz"
+zzz.Size = UDim2.new(0.1, 0, 0.06)
+zzz.Position = UDim2.new(0.49, 0, 0.01)
+zzz.Parent = scrollingFrame
+local c5 = w('UICorner')
+c5.CornerRadius = ww
+c5.Parent = zzz
+zzz.BackgroundTransparency = 0.5
+zzz.TextColor3 = color
+local Extended = Instance.new("TextButton")
+Extended.Name = "Extended"
+Extended.Text = "Extended"
+Extended.TextSize = 7
+Extended.Size = UDim2.new(0.1, 0, 0.06)
+Extended.Position = UDim2.new(0.61, 0, 0.01)
+Extended.Parent = scrollingFrame
+local c6 = w('UICorner')
+c6.CornerRadius = ww
+c6.Parent = Extended
+Extended.BackgroundTransparency = 0.5
+Extended.TextColor3 = color
+local brick = Instance.new("TextButton")
+brick.Name = "brick"
+brick.Text = "Brick"
+brick.Size = UDim2.new(0.1, 0, 0.06)
+brick.Position = UDim2.new(0.73, 0, 0.01)
+brick.Parent = scrollingFrame
+local c7 = w('UICorner')
+c7.CornerRadius = ww
+c7.Parent = brick
+brick.BackgroundTransparency = 0.5
+brick.TextColor3 = color
+local snow = Instance.new("TextButton")
+snow.Name = "snow"
+snow.Text = "Snow"
+snow.Size = UDim2.new(0.1, 0, 0.06)
+snow.Position = UDim2.new(0.85, 0, 0.01)
+snow.Parent = scrollingFrame
+local c8 = w('UICorner')
+c8.CornerRadius = ww
+c8.Parent = snow
+snow.BackgroundTransparency = 0.5
+snow.TextColor3 = color
+local pull = Instance.new("TextButton")
+pull.Name = "pull"
+pull.Text = "Pull"
+pull.Size = UDim2.new(0.1, 0, 0.06)
+pull.Position = UDim2.new(0.01, 0, 0.08)
+pull.Parent = scrollingFrame
+local c9 = w('UICorner')
+c9.CornerRadius = ww
+c9.Parent = pull
+pull.BackgroundTransparency = 0.5
+pull.TextColor3 = color
+local flash = Instance.new("TextButton")
+flash.Name = "flash"
+flash.Text = "Flash"
+flash.Size = UDim2.new(0.1, 0, 0.06)
+flash.Position = UDim2.new(0.13, 0, 0.08)
+flash.Parent = scrollingFrame
+local c10 = w('UICorner')
+c10.CornerRadius = ww
+c10.Parent = flash
+flash.BackgroundTransparency = 0.5
+flash.TextColor3 = color
+local spring = Instance.new("TextButton")
+spring.Name = "spring"
+spring.Text = "Spring"
+spring.Size = UDim2.new(0.1, 0, 0.06)
+spring.Position = UDim2.new(0.25, 0, 0.08)
+spring.Parent = scrollingFrame
+local c11 = w('UICorner')
+c11.CornerRadius = ww
+c11.Parent = spring
+spring.BackgroundTransparency = 0.5
+spring.TextColor3 = color
+local swapper = Instance.new("TextButton")
+swapper.Name = "swapper"
+swapper.Text = "Swapper"
+swapper.TextSize = 7
+swapper.Size = UDim2.new(0.1, 0, 0.06)
+swapper.Position = UDim2.new(0.37, 0, 0.08)
+swapper.Parent = scrollingFrame
+local c12 = w('UICorner')
+c12.CornerRadius = ww
+c12.Parent = swapper
+swapper.BackgroundTransparency = 0.5
+swapper.TextColor3 = color
+local bull = Instance.new("TextButton")
+bull.Name = "bull"
+bull.Text = "Bull"
+bull.Size = UDim2.new(0.1, 0, 0.06)
+bull.Position = UDim2.new(0.49, 0, 0.08)
+bull.Parent = scrollingFrame
+local c13 = w('UICorner')
+c13.CornerRadius = ww
+c13.Parent = bull
+bull.BackgroundTransparency = 0.5
+bull.TextColor3 = color
+local dice = Instance.new("TextButton")
+dice.Name = "dice"
+dice.Text = "Dice"
+dice.Size = UDim2.new(0.1, 0, 0.06)
+dice.Position = UDim2.new(0.61, 0, 0.08)
+dice.Parent = scrollingFrame
+local c14 = w('UICorner')
+c14.CornerRadius = ww
+c14.Parent = dice
+dice.BackgroundTransparency = 0.5
+dice.TextColor3 = color
+local ghost = Instance.new("TextButton")
+ghost.Name = "ghost"
+ghost.Text = "Ghost"
+ghost.Size = UDim2.new(0.1, 0, 0.06)
+ghost.Position = UDim2.new(0.73, 0, 0.08)
+ghost.Parent = scrollingFrame
+local c15 = w('UICorner')
+c15.CornerRadius = ww
+c15.Parent = ghost
+ghost.BackgroundTransparency = 0.5
+ghost.TextColor3 = color
+local thanos = Instance.new("TextButton")
+thanos.Name = "thanos"
+thanos.Text = "Thanos"
+thanos.Size = UDim2.new(0.1, 0, 0.06)
+thanos.Position = UDim2.new(0.85, 0, 0.08)
+thanos.Parent = scrollingFrame
+local c16 = w('UICorner')
+c16.CornerRadius = ww
+c16.Parent = thanos
+thanos.BackgroundTransparency = 0.5
+thanos.TextColor3 = color
+local stun = Instance.new("TextButton")
+stun.Name = "stun"
+stun.Text = "Stun"
+stun.Size = UDim2.new(0.1, 0, 0.06)
+stun.Position = UDim2.new(0.01, 0, 0.15)
+stun.Parent = scrollingFrame
+local c17 = w('UICorner')
+c17.CornerRadius = ww
+c17.Parent = stun
+stun.BackgroundTransparency = 0.5
+stun.TextColor3 = color
+local lol = Instance.new("TextButton")
+lol.Name = "lol"
+lol.Text = "L.O.L"
+lol.Size = UDim2.new(0.1, 0, 0.06)
+lol.Position = UDim2.new(0.13, 0, 0.15)
+lol.Parent = scrollingFrame
+local c18 = w('UICorner')
+c18.CornerRadius = ww
+c18.Parent = lol
+lol.BackgroundTransparency = 0.5
+lol.TextColor3 = color
+local hando = Instance.new("TextButton")
+hando.Name = "hando"
+hando.Text = "Za hand"
+hando.TextSize = 7
+hando.Size = UDim2.new(0.1, 0, 0.06)
+hando.Position = UDim2.new(0.25, 0, 0.15)
+hando.Parent = scrollingFrame
+local c19 = w('UICorner')
+c19.CornerRadius = ww
+c19.Parent = hando
+hando.BackgroundTransparency = 0.5
+hando.TextColor3 = color
+local fort = Instance.new("TextButton")
+fort.Name = "fort"
+fort.Text = "Fort"
+fort.Size = UDim2.new(0.1, 0, 0.06)
+fort.Position = UDim2.new(0.37, 0, 0.15)
+fort.Parent = scrollingFrame
+local c20 = w('UICorner')
+c20.CornerRadius = ww
+c20.Parent = fort
+fort.BackgroundTransparency = 0.5
+fort.TextColor3 = color
+local magnet = Instance.new("TextButton")
+magnet.Name = "magnet"
+magnet.Text = "Magnet"
+magnet.Size = UDim2.new(0.1, 0, 0.06)
+magnet.Position = UDim2.new(0.49, 0, 0.15)
+magnet.Parent = scrollingFrame
+local c21 = w('UICorner')
+c21.CornerRadius = ww
+c21.Parent = magnet
+magnet.BackgroundTransparency = 0.5
+magnet.TextColor3 = color
+local pusher = Instance.new("TextButton")
+pusher.Name = "pusher"
+pusher.Text = "Pusher"
+pusher.Size = UDim2.new(0.1, 0, 0.06)
+pusher.Position = UDim2.new(0.61, 0, 0.15)
+pusher.Parent = scrollingFrame
+local c22 = w('UICorner')
+c22.CornerRadius = ww
+c22.Parent = pusher
+pusher.BackgroundTransparency = 0.5
+pusher.TextColor3 = color
+local anchor = Instance.new("TextButton")
+anchor.Name = "anchor"
+anchor.Text = "Anchor"
+anchor.Size = UDim2.new(0.1, 0, 0.06)
+anchor.Position = UDim2.new(0.73, 0, 0.15)
+anchor.Parent = scrollingFrame
+local c23 = w('UICorner')
+c23.CornerRadius = ww
+c23.Parent = anchor
+anchor.BackgroundTransparency = 0.5
+anchor.TextColor3 = color
+local space = Instance.new("TextButton")
+space.Name = "space"
+space.Text = "Space"
+space.Size = UDim2.new(0.1, 0, 0.06)
+space.Position = UDim2.new(0.85, 0, 0.15)
+space.Parent = scrollingFrame
+local c24 = w('UICorner')
+c24CornerRadius = ww
+c24.Parent = space
+space.BackgroundTransparency = 0.5
+space.TextColor3 = color
+local boom = Instance.new("TextButton")
+boom.Name = "boom"
+boom.Text = "Boomerang"
+boom.TextSize = 5
+boom.Size = UDim2.new(0.1, 0, 0.06)
+boom.Position = UDim2.new(0.01,0, 0.22)
+boom.Parent = scrollingFrame
+local c25 = w('UICorner')
+c25.CornerRadius = ww
+c25.Parent = boom
+boom.BackgroundTransparency = 0.5
+boom.TextColor3 = color
+local speed = Instance.new("TextButton")
+speed.Name = "speed"
+speed.Text = "SpeedRun"
+speed.TextSize = 5
+speed.Size = UDim2.new(0.1, 0, 0.06)
+speed.Position = UDim2.new(0.13, 0, 0.22)
+speed.Parent = scrollingFrame
+local c26 = w('UICorner')
+c26.CornerRadius = ww
+c26.Parent = speed
+speed.BackgroundTransparency = 0.5
+speed.TextColor3 = color
+local mail = Instance.new("TextButton")
+mail.Name = "mail"
+mail.Text = "Mail"
+mail.Size = UDim2.new(0.1, 0, 0.06)
+mail.Position = UDim2.new(0.25, 0, 0.22)
+mail.Parent = scrollingFrame
+local c27 = w('UICorner')
+c27.CornerRadius = ww
+c27.Parent = mail
+mail.BackgroundTransparency = 0.5
+mail.TextColor3 = color
+local thick = Instance.new("TextButton")
+thick.Name = "thick"
+thick.Text = "Thick"
+thick.Size = UDim2.new(0.1, 0, 0.06)
+thick.Position = UDim2.new(0.37, 0, 0.22)
+thick.Parent = scrollingFrame
+local c28 = w('UICorner')
+c28.CornerRadius = ww
+c28.Parent = thick
+thick.BackgroundTransparency = 0.5
+thick.TextColor3 = color
+-- im bored
+local size = UDim2.new(0.1, 0, 0.06)
+local po = UDim2.new
+-- sigh
+local golden = Instance.new("TextButton")
+golden.Name = "golden"
+golden.Text = "Golden"
+golden.Size = size
+golden.Position = po(0.49, 0, 0.22)
+golden.Parent = scrollingFrame
+local c29 = w('UICorner')
+c29.CornerRadius = ww
+c29.Parent = golden
+golden.BackgroundTransparency = 0.5
+golden.TextColor3 = color
+local squid = Instance.new("TextButton")
+squid.Name = "squid"
+squid.Text = "Squid"
+squid.Size = size
+squid.Position = po(0.61, 0, 0.22)
+squid.Parent = scrollingFrame
+local c30 = w('UICorner')
+c30.CornerRadius = ww
+c30.Parent = squid
+squid.BackgroundTransparency = 0.5
+squid.TextColor3 = color
+local mr = Instance.new("TextButton")
+mr.Name = "mr"
+mr.Text = "MR"
+mr.Size = size
+mr.Position = po(0.73, 0, 0.22)
+mr.Parent = scrollingFrame
+local c31 = w('UICorner')
+c31.CornerRadius = ww
+c31.Parent = mr
+mr.BackgroundTransparency = 0.5
+mr.TextColor3 = color
+-- im more bored
+local ct = Instance.new("TextButton")
+local c = Instance.new
+-- mhm
+local reaper = ct
+reaper.Name = "reaper"
+reaper.Text = "Reaper"
+reaper.Size = size
+reaper.Position = po(0.85, 0, 0.22)
+reaper.Parent = scrollingFrame
+local c32 = w('UICorner')
+c32.CornerRadius = ww
+c32.Parent = reaper
+reaper.BackgroundTransparency = 0.5
+reaper.TextColor3 = color
+local replica = Instance.new("TextButton")
+replica.Name = "replica"
+replica.Text = "Replica"
+replica.Size = size
+replica.Position = po(0.01, 0, 0.29)
+replica.Parent = scrollingFrame
+local c33 = w('UICorner')
+c33.CornerRadius = ww
+c33.Parent = replica
+replica.BackgroundTransparency = 0.5
+replica.TextColor3 = color
+local defense = c("TextButton")
+defense.Name = "defense"
+defense.Text = "Defense"
+defense.TextSize = 7
+defense.Size = size
+defense.Position = po(0.13, 0, 0.29)
+defense.Parent = scrollingFrame
+local c34 = w('UICorner')
+c34.CornerRadius = ww
+c34.Parent = defense
+defense.BackgroundTransparency = 0.5
+defense.TextColor3 = color
+local killstreak = c("TextButton")
+killstreak.Name = "killstreak"
+killstreak.Text = "KillStreak"
+killstreak.TextSize = 6
+killstreak.Size = size
+killstreak.Position = po(0.25, 0, 0.29)
+killstreak.Parent = scrollingFrame
+local c35 = w('UICorner')
+c35.CornerRadius = ww
+c35.Parent = killstreak
+killstreak.BackgroundTransparency = 0.5
+killstreak.TextColor3 = color
+local reverse = c("TextButton")
+reverse.Name = "reverse"
+reverse.Text = "Reverse"
+reverse.Size = size
+reverse.TextSize = 7
+reverse.Position = po(0.37, 0, 0.29)
+reverse.Parent = scrollingFrame
+local c36 = w('UICorner')
+c36.CornerRadius = ww
+c36.Parent = reverse
+reverse.BackgroundTransparency = 0.5
+reverse.TextColor3 = color
+local shukuchi = c("TextButton")
+shukuchi.Name = "shukuchi"
+shukuchi.Text = "Shukuchi"
+shukuchi.TextSize = 7
+shukuchi.Size = size
+shukuchi.Position = po(0.49, 0, 0.29)
+shukuchi.Parent = scrollingFrame
+local c37 = w('UICorner')
+c37.CornerRadius = ww
+c37.Parent = shukuchi
+shukuchi.BackgroundTransparency = 0.5
+shukuchi.TextColor3 = color
+local duelist = c("TextButton")
+duelist.Name = "duelist"
+duelist.Text = "Duelist"
+duelist.TextSize = 7
+duelist.Size = size
+duelist.Position = po(0.61, 0, 0.29)
+duelist.Parent = scrollingFrame
+local c38 = w('UICorner')
+c38.CornerRadius = ww
+c38.Parent = duelist
+duelist.BackgroundTransparency = 0.5
+duelist.TextColor3 = color
+local woah = c("TextButton")
+woah.Name = "woah"
+woah.Text = "Woah"
+woah.Size = size
+woah.Position = po(0.73, 0, 0.29)
+woah.Parent = scrollingFrame
+local c39 = w('UICorner')
+c39.CornerRadius = ww
+c39.Parent = woah
+woah.BackgroundTransparency = 0.5
+woah.TextColor3 = color
+local ice = c("TextButton")
+ice.Name = "ice"
+ice.Text = "Ice"
+ice.Size = size
+ice.Position = po(0.85, 0, 0.29)
+ice.Parent = scrollingFrame
+local c40 = w('UICorner')
+c40.CornerRadius = ww
+c40.Parent = ice
+ice.BackgroundTransparency = 0.5
+ice.TextColor3 = color
+local gummy = c("TextButton")
+gummy.Name = "gummy"
+gummy.Text = "Gummy"
+gummy.Size = size
+gummy.Position = po(0.01, 0, 0.36)
+gummy.Parent = scrollingFrame
+local c41 = w('UICorner')
+c41.CornerRadius = ww
+c41.Parent = gummy
+gummy.BackgroundTransparency = 0.5
+gummy.TextColor3 = color
+local adios = c("TextButton")
+adios.Name = "adios"
+adios.Text = "Adios"
+adios.Size = size
+adios.Position = po(0.13, 0, 0.36)
+adios.Parent = scrollingFrame
+local c42 = w('UICorner')
+c42.CornerRadius = ww
+c42.Parent = adios
+adios.BackgroundTransparency = 0.5
+adios.TextColor3 = color
+local blocked = c("TextButton")
+blocked.Name = "blocked"
+blocked.Text = "Blocked"
+blocked.Size = size
+blocked.Position = po(0.25, 0, 0.36)
+blocked.TextSize = 7
+blocked.Parent = scrollingFrame
+local c43 = w('UICorner')
+c43.CornerRadius = ww
+c43.Parent = blocked
+blocked.BackgroundTransparency = 0.5
+blocked.TextColor3 = color
+local divert = c("TextButton")
+divert.Name = "divert"
+divert.Text = "Divert"
+divert.Size = size
+divert.Position = po(0.37, 0, 0.36)
+divert.Parent = scrollingFrame
+local c44 = w('UICorner')
+c44.CornerRadius = ww
+c44.Parent = divert
+divert.BackgroundTransparency = 0.5
+divert.TextColor3 = color
+local engineer = c("TextButton")
+engineer.Name = "engineer"
+engineer.Text = "Engineer"
+engineer.TextSize = 6
+engineer.Size = size
+engineer.Position = po(0.49, 0, 0.36)
+engineer.Parent = scrollingFrame
+local c45 = w('UICorner')
+c45.CornerRadius = ww
+c45.Parent = engineer
+engineer.BackgroundTransparency = 0.5
+engineer.TextColor3 = color
+local rocky = c("TextButton")
+rocky.Name = "rocky"
+rocky.Text = "Rocky"
+rocky.Size = size
+rocky.Position = po(0.61, 0, 0.36)
+rocky.Parent = scrollingFrame
+local c46 = w('UICorner')
+c46.CornerRadius = ww
+c46.Parent = rocky
+rocky.BackgroundTransparency = 0.5
+rocky.TextColor3 = color
+local coil = c("TextButton")
+coil.Name = "coil"
+coil.Text = "Coil"
+coil.Size = size
+coil.Position = po(0.73, 0, 0.36)
+coil.Parent = scrollingFrame
+local c47 = w('UICorner')
+c47.CornerRadius = ww
+c47.Parent = coil
+coil.BackgroundTransparency = 0.5
+coil.TextColor3 = color
+local conveyor = c("TextButton")
+conveyor.Name = "conveyor"
+conveyor.Text = "Conveyor"
+conveyor.TextSize = 6
+conveyor.Size = size
+conveyor.Position = po(0.85, 0, 0.36)
+conveyor.Parent = scrollingFrame
+local c48 = w('UICorner')
+c48.CornerRadius = ww
+c48.Parent = conveyor
+conveyor.BackgroundTransparency = 0.5
+conveyor.TextColor3 = color
+local balloon = c("TextButton")
+balloon.Name = "balloon"
+balloon.Text = "Balloon"
+balloon.TextSize = 6
+balloon.Size = size
+balloon.Position = po(0.01, 0, 0.43)
+balloon.Parent = scrollingFrame
+local c49 = w('UICorner')
+c49.CornerRadius = ww
+c49.Parent = balloon
+balloon.BackgroundTransparency = 0.5
+balloon.TextColor3 = color
+local phantom = c("TextButton")
+phantom.Name = "phantom"
+phantom.Text = "Phantom"
+phantom.TextSize = 7
+phantom.Size = size
+phantom.Position = po(0.13, 0, 0.43)
+phantom.Parent = scrollingFrame
+local c50 = w('UICorner')
+c50.CornerRadius = ww
+c50.Parent = phantom
+phantom.BackgroundTransparency = 0.5
+phantom.TextColor3 = color
+local gato = c("TextButton")
+gato.Name = "gato"
+gato.Text = "Gato"
+gato.Size = size
+gato.Position = po(0.25, 0, 0.43)
+gato.Parent = scrollingFrame
+local c51 = w('UICorner')
+c51.CornerRadius = ww
+c51.Parent = gato
+gato.BackgroundTransparency = 0.5
+gato.TextColor3 = color
+local wormhole = c("TextButton")
+wormhole.Name = "wormhole"
+wormhole.Text = "WormHole"
+wormhole.TextSize = 6
+wormhole.Size = size
+wormhole.Position = po(0.37, 0, 0.43)
+wormhole.Parent = scrollingFrame
+local c52 = w('UICorner')
+c52.CornerRadius = ww
+c52.Parent = wormhole
+wormhole.BackgroundTransparency = 0.5
+wormhole.TextColor3 = color
+local stop = c("TextButton")
+stop.Name = "Stop"
+stop.Text = "Stop"
+stop.Size = size
+stop.Position = po(0.49, 0, 0.43)
+stop.Parent = scrollingFrame
+local c53 = w('UICorner')
+c53.CornerRadius = ww
+c53.Parent = stop
+stop.BackgroundTransparency = 0.5
+stop.TextColor3 = color
+local track = c("TextButton")
+track.Name = "track"
+track.Text = "Track"
+track.Size = size
+track.Position = po(0.61, 0, 0.43)
+track.Parent = scrollingFrame
+local c54 = w('UICorner')
+c54.CornerRadius = ww
+c54.Parent = track
+track.BackgroundTransparency = 0.5
+track.TextColor3 = color
+local tableflip = c("TextButton")
+tableflip.Name = "tableflip"
+tableflip.Text = "TableFlip"
+tableflip.TextSize = 5
+tableflip.Size = size
+tableflip.Position = po(0.73, 0, 0.43)
+tableflip.Parent = scrollingFrame
+local c55 = w('UICorner')
+c55.CornerRadius = ww
+c55.Parent = tableflip
+tableflip.BackgroundTransparency = 0.5
+tableflip.TextColor3 = color
+local shield = c("TextButton")
+shield.Name = "shield"
+shield.Text = "Shield"
+shield.Size = size
+shield.Position = po(0.85, 0, 0.43)
+shield.Parent = scrollingFrame
+local c56 = w('UICorner')
+c56.CornerRadius = ww
+c56.Parent = shield
+shield.BackgroundTransparency = 0.5
+shield.TextColor3 = color
+local booster = c("TextButton")
+booster.Name = "booster"
+booster.Text = "Booster"
+booster.TextSize = 7
+booster.Size = size
+booster.Position = po(0.01, 0, 0.5)
+booster.Parent = scrollingFrame
+local c57 = w('UICorner')
+c57.CornerRadius = ww
+c57.Parent = booster
+booster.BackgroundTransparency = 0.5
+booster.TextColor3 = color
+local pingpong = c("TextButton")
+pingpong.Name = "pingpong"
+pingpong.Text = "Ping Pong"
+pingpong.TextSize = 5
+pingpong.Size = size
+pingpong.Position = po(0.13, 0, 0.5)
+pingpong.Parent = scrollingFrame
+local c58 = w('UICorner')
+c58.CornerRadius = ww
+c58.Parent = pingpong
+pingpong.BackgroundTransparency = 0.5
+pingpong.TextColor3 = color
+local baller = c("TextButton")
+baller.Name = "baller"
+baller.Text = "Baller"
+baller.Size = size
+baller.Position = po(0.25, 0, 0.5)
+baller.Parent = scrollingFrame
+local c59 = w('UICorner')
+c59.CornerRadius = ww
+c59.Parent = baller
+baller.BackgroundTransparency = 0.5
+baller.TextColor3 = color
+local homerun = c("TextButton")
+homerun.Name = "homerun"
+homerun.Text = "Home Run"
+homerun.TextSize = 6
+homerun.Size = size
+homerun.Position = po(0.37, 0, 0.5)
+homerun.Parent = scrollingFrame
+local c60 = w('UICorner')
+c60.CornerRadius = ww
+c60.Parent = homerun
+homerun.BackgroundTransparency = 0.5
+homerun.TextColor3 = color
+local whirlwind = c("TextButton")
+whirlwind.Text = "Whirlwind"
+whirlwind.TextSize = 5
+whirlwind.Size = size
+whirlwind.Position = po(0.49, 0, 0.5)
+whirlwind.Parent = scrollingFrame
+local c61 = w('UICorner')
+c61.CornerRadius = ww
+c61.Parent = whirlwind
+whirlwind.BackgroundTransparency = 0.5
+whirlwind.TextColor3 = color
+local slicer = c("TextButton")
+slicer.Name = "slicer"
+slicer.Text = "Slicer"
+slicer.Size = size
+slicer.Position = po(0.61, 0, 0.5)
+slicer.Parent = scrollingFrame
+local c62 = w('UICorner')
+c62.CornerRadius = ww
+c62.Parent = slicer
+slicer.BackgroundTransparency = 0.5
+slicer.TextColor3 = color
+local excavator = c("TextButton")
+excavator.Name = "excavator"
+excavator.Text = "Excavator"
+excavator.TextSize = 5
+excavator.Size = size
+excavator.Position = po(0.73, 0, 0.5)
+excavator.Parent = scrollingFrame
+local c63 = w('UICorner')
+c63.CornerRadius = ww
+c63.Parent = excavator
+excavator.BackgroundTransparency = 0.5
+excavator.TextColor3 = color
+local nightmare = c("TextButton")
+nightmare.Name = "nightmare"
+nightmare.Text = "Nightmare"
+nightmare.TextSize = 6
+nightmare.Size = size
+nightmare.Position = po(0.85, 0, 0.5)
+nightmare.Parent = scrollingFrame
+local c64 = w('UICorner')
+c64.CornerRadius = ww
+c64.Parent = nightmare
+nightmare.BackgroundTransparency = 0.5
+nightmare.TextColor3 = color
+local thor = c("TextButton")
+thor.Name = "thor"
+thor.Text = "Thor"
+thor.Size = size
+thor.Position = po(0.01, 0, 0.57)
+thor.Parent = scrollingFrame
+local c65 = w('UICorner')
+c65.CornerRadius = ww
+c65.Parent = thor
+thor.BackgroundTransparency = 0.5
+thor.TextColor3 = color
+local pocket = c("TextButton")
+pocket.Name = "pocket"
+pocket.Text = "Pocket"
+pocket.Size = size
+pocket.Position = po(0.13, 0, 0.57)
+pocket.Parent = scrollingFrame
+local c66 = w('UICorner')
+c66.CornerRadius = ww
+c66.Parent = pocket
+pocket.BackgroundTransparency = 0.5
+pocket.TextColor3 = color
+local grapple = c("TextButton")
+grapple.Name = "grapple"
+grapple.Text = "Grapple"
+grapple.TextSize = 7
+grapple.Size = size
+grapple.Position = po(0.25, 0, 0.57)
+grapple.Parent = scrollingFrame
+local c67 = w('UICorner')
+c67.CornerRadius = ww
+c67.Parent = grapple
+grapple.BackgroundTransparency = 0.5
+grapple.TextColor3 = color
+local cloud = c("TextButton")
+cloud.Name = "cloud"
+cloud.Text = "Cloud"
+cloud.Size = size
+cloud.Position = po(0.37, 0, 0.57)
+cloud.Parent = scrollingFrame
+local c68 = w('UICorner')
+c68.CornerRadius = ww
+c68.Parent = cloud
+cloud.BackgroundTransparency = 0.5
+cloud.TextColor3 = color
+local gravity = c("TextButton")
+gravity.Name = "gravity"
+gravity.Text = "Gravity"
+gravity.TextSize = 7
+gravity.Size = size
+gravity.Position = po(0.49, 0, 0.57)
+gravity.Parent = scrollingFrame
+local c69 = w('UICorner')
+c69.CornerRadius = ww
+c69.Parent = gravity
+gravity.BackgroundTransparency = 0.5
+gravity.TextColor3 = color
+local parry = c("TextButton")
+parry.Name = "parry"
+parry.Text = "Parry"
+parry.Size = size
+parry.Position = po(0.61, 0, 0.57)
+parry.Parent = scrollingFrame
+local c70 = w('UICorner')
+c70.CornerRadius = ww
+c70.Parent = parry
+parry.BackgroundTransparency = 0.5
+parry.TextColor3 = color
+local jebaited = c("TextButton")
+jebaited.Name = "jebaited"
+jebaited.Text = "Jebaited"
+jebaited.TextSize = 6
+jebaited.Size = size
+jebaited.Position = po(0.73, 0, 0.57)
+jebaited.Parent = scrollingFrame
+local c71 = w('UICorner')
+c71.CornerRadius = ww
+c71.Parent = jebaited
+jebaited.BackgroundTransparency = 0.5
+jebaited.TextColor3 = color
+local meteor = c("TextButton")
+meteor.Name = "meteor"
+meteor.Text = "Meteor"
+meteor.Size = size
+meteor.Position = po(0.85, 0, 0.57)
+meteor.Parent = scrollingFrame
+local c72 = w('UICorner')
+c72.CornerRadius = ww
+c72.Parent = meteor
+meteor.BackgroundTransparency = 0.5
+meteor.TextColor3 = color
+local oven = c("TextButton")
+oven.Name = "oven"
+oven.Text = "Oven"
+oven.Size = size
+oven.Position = po(0.01, 0, 0.64)
+oven.Parent = scrollingFrame
+local c73 = w('UICorner')
+c73.CornerRadius = ww
+c73.Parent = oven
+oven.BackgroundTransparency = 0.5
+oven.TextColor3 = color
+local angel = c("TextButton")
+angel.Name = "angel"
+angel.Text = "Angel"
+angel.Size = size
+angel.Position = po(0.13, 0, 0.64)
+angel.Parent = scrollingFrame
+local c74 = w('UICorner')
+c74.CornerRadius = ww
+c74.Parent = angel
+angel.BackgroundTransparency = 0.5
+angel.TextColor3 = color
+local sun = c("TextButton")
+sun.Name = "sun"
+sun.Text = "Sun"
+sun.Size = size
+sun.Position = po(0.25, 0, 0.64)
+sun.Parent = scrollingFrame
+local c75 = w('UICorner')
+c75.CornerRadius = ww
+c75.Parent = sun
+sun.BackgroundTransparency = 0.5
+sun.TextColor3 = color
+local ferry = c("TextButton")
+ferry.Name = "ferry"
+ferry.Text = "Ferry"
+ferry.Size = size
+ferry.Position = po(0.37, 0, 0.64)
+ferry.Parent = scrollingFrame
+local c76 = w('UICorner')
+c76.CornerRadius = ww
+c76.Parent = ferry
+ferry.BackgroundTransparency = 0.5
+ferry.TextColor3 = color
+local blackhole = c("TextButton")
+blackhole.Name = "blackhole"
+blackhole.Text = "BlackHole"
+blackhole.TextSize = 6
+blackhole.Size = size
+blackhole.Position = po(0.49, 0, 0.64)
+blackhole.Parent = scrollingFrame
+local c77 = w('UICorner')
+c77.CornerRadius = ww
+c77.Parent = blackhole
+blackhole.BackgroundTransparency = 0.5
+blackhole.TextColor3 = color
+local blink = c("TextButton")
+blink.Name = "blink"
+blink.Text = "Blink"
+blink.Size = size
+blink.Position = po(0.61, 0, 0.64)
+blink.Parent = scrollingFrame
+local c78 = w('UICorner')
+c78.CornerRadius = ww
+c78.Parent = blink
+blink.BackgroundTransparency = 0.5
+blink.TextColor3 = color
+local prop = c("TextButton")
+prop.Name = "prop"
+prop.Text = "Prop"
+prop.Size = size
+prop.Position = po(0.73, 0, 0.64)
+prop.Parent = scrollingFrame
+local c79 = w('UICorner')
+c79.CornerRadius = ww
+c79.Parent = prop
+prop.BackgroundTransparency = 0.5
+prop.TextColor3 = color
+local slapstick = c("TextButton")
+slapstick.Name = "slapstick"
+slapstick.Text = "SlapStick"
+slapstick.TextSize = 6
+slapstick.Size = size
+slapstick.Position = po(0.85, 0, 0.64)
+slapstick.Parent = scrollingFrame
+local c80 = w('UICorner')
+c80.CornerRadius = ww
+c80.Parent = slapstick
+slapstick.BackgroundTransparency = 0.5
+slapstick.TextColor3 = color
+local beatdown = c("TextButton")
+beatdown.Name = "beatdown"
+beatdown.Text = "BeatDown"
+beatdown.TextSize = 6
+beatdown.Size = size
+beatdown.Position = po(0.01, 0, 0.71)
+beatdown.Parent = scrollingFrame
+local c81 = w('UICorner')
+c81.CornerRadius = ww
+c81.Parent = beatdown
+beatdown.BackgroundTransparency = 0.5
+beatdown.TextColor3 = color
+local chicken = c("TextButton")
+chicken.Name = "chicken"
+chicken.Text = "Chicken"
+chicken.TextSize = 7
+chicken.Size = size
+chicken.Position = po(0.13, 0, 0.71)
+chicken.Parent = scrollingFrame
+local c82 = w('UICorner')
+c82.CornerRadius = ww
+c82.Parent = chicken
+chicken.BackgroundTransparency = 0.5
+chicken.TextColor3 = color
+local bonk = c("TextButton")
+bonk.Name = "bonk"
+bonk.Text = "Bonk"
+bonk.Size = size
+bonk.Position = po(0.25, 0, 0.71)
+bonk.Parent = scrollingFrame
+local c83 = w('UICorner')
+c83.CornerRadius = ww
+c83.Parent = bonk
+bonk.BackgroundTransparency = 0.5
+bonk.TextColor3 = color
+local sbeve = c("TextButton")
+sbeve.Name = "sbeve"
+sbeve.Text = "Sbeve"
+sbeve.Size = size
+sbeve.Position = po(0.37, 0, 0.71)
+sbeve.Parent = scrollingFrame
+local c84 = w('UICorner')
+c84.CornerRadius = ww
+c84.Parent = sbeve
+sbeve.BackgroundTransparency = 0.5
+sbeve.TextColor3 = color
+local golem = c("TextButton")
+golem.Name = "golem"
+golem.Text = "Golem"
+golem.Size = size
+golem.Position = po(0.49, 0, 0.71)
+golem.Parent = scrollingFrame
+local c85 = w('UICorner')
+c85.CornerRadius = ww
+c85.Parent = golem
+golem.BackgroundTransparency = 0.5
+golem.TextColor3 = color
+local grab = c("TextButton")
+grab.Name = "grab"
+grab.Text = "Grab"
+grab.Size = size
+grab.Position = po(0.61, 0, 0.71)
+grab.Parent = scrollingFrame
+local c86 = w('UICorner')
+c86.CornerRadius = ww
+c86.Parent = grab
+grab.BackgroundTransparency = 0.5
+grab.TextColor3 = color
+local ufo = c("TextButton")
+ufo.Name = "ufo"
+ufo.Text = "UFO"
+ufo.Size = size
+ufo.Position = po(0.73, 0, 0.71)
+ufo.Parent = scrollingFrame
+local c87 = w('UICorner')
+c87.CornerRadius = ww
+c87.Parent = ufo
+ufo.BackgroundTransparency = 0.5
+ufo.TextColor3 = color
+local ghand = c("TextButton")
+ghand.Name = "ghand"
+ghand.Text = "God's Hand"
+ghand.TextSize = 5
+ghand.Size = size
+ghand.Position = po(0.85, 0, 0.71)
+ghand.Parent = scrollingFrame
+local c88 = w('UICorner')
+c88.CornerRadius = ww
+c88.Parent = ghand
+ghand.BackgroundTransparency = 0.5
+ghand.TextColor3 = color
+local flex = c("TextButton")
+flex.Name = "name"
+flex.Text = "Flex"
+flex.Size = size
+flex.Position = po(0.01, 0, 0.78)
+flex.Parent = scrollingFrame
+local c89 = w('UICorner')
+c89.CornerRadius = ww
+c89.Parent = flex
+flex.BackgroundTransparency = 0.5
+flex.TextColor3 = color
+local error = c("TextButton")
+error.Name = "error"
+error.Text = "Error"
+error.Size = size
+error.Position = po(0.13, 0, 0.78)
+error.Parent = scrollingFrame
+local c90 = w('UICorner')
+c90.CornerRadius = ww
+c90.Parent = error
+error.BackgroundTransparency = 0.5
+error.TextColor3 = color
+-- main part
+button.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 0 then
+fireclickdetector(game.workspace.Lobby.Default.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+spin.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 0 then
+fireclickdetector(game.workspace.Lobby.spin.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+dual.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 10 then
+fireclickdetector(game.workspace.Lobby.Dual.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+diamond.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 45 then
+fireclickdetector(game.workspace.Lobby.Diamond.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+zzz.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 70 then
+fireclickdetector(game.workspace.Lobby.ZZZZZZZ.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+Extended.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 105 then
+fireclickdetector(game.workspace.Lobby.Extended.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+brick.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 150 then
+fireclickdetector(game.workspace.Lobby.Brick.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+snow.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 195 then
+fireclickdetector(game.workspace.Lobby.Snow.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+pull.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 250 then
+fireclickdetector(game.workspace.Lobby.Pull.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+flash.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 315 then
+fireclickdetector(game.workspace.Lobby.Flash.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+spring.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 380 then
+fireclickdetector(game.workspace.Lobby.Spring.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+swapper.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 420 then
+fireclickdetector(game.workspace.Lobby.Swapper.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+bull.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 520 then
+fireclickdetector(game.workspace.Lobby.Bull.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+dice.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 585 then
+fireclickdetector(game.workspace.Lobby.Dice.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+ghost.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 666 then
+fireclickdetector(game.workspace.Lobby.Ghost.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+thanos.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 795 then
+fireclickdetector(game.workspace.Lobby.Thanos.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+stun.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 870 then
+fireclickdetector(game.workspace.Lobby.Stun.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+lol.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 925 then
+fireclickdetector(game.workspace.Lobby["L.O.L.B.O.M.B"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+hando.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1000 then
+fireclickdetector(game.workspace.Lobby["Za Hando"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+fort.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1075 then
+fireclickdetector(game.workspace.Lobby.Fort.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+magnet.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1125 then
+fireclickdetector(game.workspace.Lobby.Magnet.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+pusher.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1250 then
+fireclickdetector(game.workspace.Lobby.Pusher.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+anchor.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1350 then
+fireclickdetector(game.workspace.Lobby.Anchor.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+space.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1500 then
+fireclickdetector(game.workspace.Lobby.Space.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+boom.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1625 then
+fireclickdetector(game.workspace.Lobby.Boomerang.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+speed.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 1750 then
+fireclickdetector(game.workspace.Lobby.Speedrun.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+mail.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 2000 then
+fireclickdetector(game.workspace.Lobby.Mail.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+thick.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 2250 then
+fireclickdetector(game.workspace.Lobby["T H I C K"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+golden.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 2500 then
+fireclickdetector(game.workspace.Lobby.Golden.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+squid.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 2750 then
+fireclickdetector(game.workspace.Lobby.Squid.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+mr.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 3000 then
+fireclickdetector(game.workspace.Lobby.MR.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+reaper.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 3500 then
+fireclickdetector(game.workspace.Lobby.Reaper.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+replica.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 4000 then
+fireclickdetector(game.workspace.Lobby.Replica.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+defense.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 4500 then
+fireclickdetector(game.workspace.Lobby.Defense.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+killstreak.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 5000 then
+fireclickdetector(game.workspace.Lobby.Killstreak.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+reverse.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 5500 then
+fireclickdetector(game.workspace.Lobby.Reverse.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+shukuchi.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 6000 then
+fireclickdetector(game.workspace.Lobby.Shukuchi.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+duelist.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 6500 then
+fireclickdetector(game.workspace.Lobby.Duelist.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+woah.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 7000 then
+fireclickdetector(game.workspace.Lobby.woah.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+ice.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 7500 then
+fireclickdetector(game.workspace.Lobby.Ice.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+gummy.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >=7750 then
+fireclickdetector(game.workspace.Lobby.Gummy.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+adios.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 8000 then
+fireclickdetector(game.workspace.Lobby.Adios.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+blocked.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 8500 then
+fireclickdetector(game.workspace.Lobby.Blocked.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+divert.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 8750 then
+fireclickdetector(game.workspace.Lobby.Divert.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+engineer.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 9000 then
+fireclickdetector(game.workspace.Lobby.Engineer.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+rocky.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 9500 then
+fireclickdetector(game.workspace.Lobby.Rocky.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+coil.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 9750 then
+fireclickdetector(game.workspace.Lobby.Coil.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+conveyor.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 10000 then
+fireclickdetector(game.workspace.Lobby.Conveyor.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+balloon.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 10500 then
+fireclickdetector(game.workspace.Lobby.Balloony.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+phantom.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 11000 then
+fireclickdetector(game.workspace.Lobby.Phantom.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+gato.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 11500 then
+fireclickdetector(game.workspace.Lobby["el gato"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+wormhole.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 12000 then
+fireclickdetector(game.workspace.Lobby.Wormhole.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+stop.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 13000 then
+fireclickdetector(game.workspace.Lobby.STOP.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+track.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 14000 then
+fireclickdetector(game.workspace.Lobby.Track.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+tableflip.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 15000 then
+fireclickdetector(game.workspace.Lobby.Tableflip.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+shield.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 16000 then
+fireclickdetector(game.workspace.Lobby.Shield.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+-- stage ?
+booster.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 17000 then
+fireclickdetector(game.workspace.Lobby.Booster.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+pingpong.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 18000 then
+fireclickdetector(game.workspace.Lobby["Ping Pong"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+baller.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 19000 then
+fireclickdetector(game.workspace.Lobby.Baller.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+homerun.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 20000 then
+fireclickdetector(game.workspace.Lobby["Home Run"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+whirlwind.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 21000 then
+fireclickdetector(game.workspace.Lobby.Whirlwind.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+slicer.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 22000 then
+fireclickdetector(game.workspace.Lobby.Slicer.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+excavator.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 23000 then
+fireclickdetector(game.workspace.Lobby.Excavator.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+nightmare.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 24000 then
+fireclickdetector(game.workspace.Lobby.Nightmare.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+thor.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 25000 then
+fireclickdetector(game.workspace.Lobby.Thor.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+pocket.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 26000 then
+fireclickdetector(game.workspace.Lobby.Pocket.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+grapple.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 27000 then
+fireclickdetector(game.workspace.Lobby.Grapple.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+cloud.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 28000 then
+fireclickdetector(game.workspace.Lobby.Cloud.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+gravity.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 29000 then
+fireclickdetector(game.workspace.Lobby.Gravity.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+parry.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 30000 then
+fireclickdetector(game.workspace.Lobby.Parry.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+jebaited.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 31000 then
+fireclickdetector(game.workspace.Lobby.Jebaited.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+meteor.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 32000 then
+fireclickdetector(game.workspace.Lobby.Meteor.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+-- stage ?
+oven.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 33000 then
+fireclickdetector(game.workspace.Lobby.Oven.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+angel.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 34000 then
+fireclickdetector(game.workspace.Lobby["Guardian Angel"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+sun.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 35000 then
+fireclickdetector(game.workspace.Lobby.Sun.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+ferry.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 36000 then
+fireclickdetector(game.workspace.Lobby.Ferryman.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+blackhole.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 37000 then
+fireclickdetector(game.workspace.Lobby.Blackhole.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+blink.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 38000 then
+fireclickdetector(game.workspace.Lobby.Blink.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+prop.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 39000 then
+fireclickdetector(game.workspace.Lobby.Prop.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+slapstick.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 40000 then
+fireclickdetector(game.workspace.Lobby.Slapstick.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+-- stage
+beatdown.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 41000 then
+fireclickdetector(game.workspace.Lobby.Beatdown.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+chicken.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 42000 then
+fireclickdetector(game.workspace.Lobby.Chicken.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+bonk.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 43000 then
+fireclickdetector(game.workspace.Lobby.BONK.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+sbeve.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 44000 then
+fireclickdetector(game.workspace.Lobby.Sbeve.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+golem.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 45000 then
+fireclickdetector(game.workspace.Lobby.Golem.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+grab.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 46000 then
+fireclickdetector(game.workspace.Lobby.Grab.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+ufo.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 47000 then
+fireclickdetector(game.workspace.Lobby.UFO.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+ghand.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 48000 then
+fireclickdetector(game.workspace.Lobby["God's Hand"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+flex.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 100000 then
+fireclickdetector(game.workspace.Lobby["The Flex"].ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+error.MouseButton1Click:Connect(function()
+local lobby = game.Players.LocalPlayer.Character:FindFirstChild("InLobby")
+local slaps = game.Players.LocalPlayer.leaderstats.Slaps
+if lobby then
+    if slaps.Value >= 50000 then
+fireclickdetector(game.workspace.Lobby.Error.ClickDetector)
+    else
+CustomSendNotification("info", "you dont own this glove", "rbxassetid://17105411523")
+    end
+elseif lobby == nil then
+CustomSendNotification("info", "you're not in lobby", "rbxassetid://17105411523")
+end
+end)
+-- corner
+local corner = c("UICorner")
+corner.CornerRadius = UDim.new(0, 10)
+corner.Parent = scrollingFrame
+local corner2 = c("UICorner")
+corner2.CornerRadius = UDim.new(0, 10)
+corner2.Parent = pic
+local corner3 = c("UICorner")
+corner3.CornerRadius = UDim.new(0, 10)
+corner3.Parent = sadness
+--
+local closebutton = c("TextButton")
+closebutton.Name = "close"
+closebutton.Text = "X"
+closebutton.TextSize = 15
+closebutton.Size = UDim2.new(0.03, 0, 0.07, 0)
+closebutton.Position = po(0.73, 0, 0.11)
+closebutton.Parent = mainbook
+closebutton.TextColor3 = color
+closebutton.BackgroundTransparency = 0
+closebutton.MouseButton1Click:Connect(function()
+mainbook:Destroy()
+end)
+-- most important buttons here
+local slapsec = c("TextButton")
+slapsec.Name = "slapsection"
+slapsec.Text = "SLAP"
+slapsec.Size = UDim2.new(0.04, 0, 0.1, 0)
+slapsec.Position = po(0.72, 0, 0.25)
+slapsec.Parent = mainbook
+-- badge section
+local badge = c("TextButton")
+badge.Name = "badgesection"
+badge.Text = "BADGE"
+badge.Size = UDim2.new(0.04, 0, 0.1, 0)
+badge.Position = po(0.72, 0, 0.38)
+badge.TextSize = 6
+badge.Parent = mainbook
+-- border
+slapsec.BorderSizePixel = 3
+slapsec.BorderColor3 = Color3.new(255, 255, 255)
+--another frame
+local fuck = c("ScrollingFrame")
+fuck.BackgroundTransparency = 1
+fuck.Name = "badgegloves"
+fuck.Size = UDim2.new(0.5, 0, 0.8, 0)
+scrollingFrame2.Position = UDim2.new(0.2, 0, 0.1)
+fuck.Active = true
+fuck.Parent = mainbook
+local corner4 = c('UICorner')
+corner4.CornerRadius = UDim.new(0, 10)
+corner4.Parent = scrollingFrame2
+fuck.Visible = false
+-- rest from now
+badge.MouseButton1Click:Connect(function()
+  badge.BorderSizePixel = 3
+  wait()
+  badge.BorderColor3 = Color3.new(255, 255, 255)
+  wait()
+  slapsec.BorderSizePixel = 0
+  slapsec.BorderColor3 = Color3.new(0, 0, 0)
+  wait()
+  scrollingFrame.Visible = false
+  wait()
+  fuck.Visible = true
+end)
+slapsec.MouseButton1Click:Connect(function()
+slapsec.BorderSizePixel = 3
+slapsec.BorderColor3 = Color3.new(255, 255, 255)
+wait()
+badge.BorderSizePixel = 0
+badge.BorderColor3 = Color3.new(0, 0, 0)
+wait()
+scrollingFrame.Visible = true
+fuck.Visible = false
+end)
