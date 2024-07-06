@@ -1,0 +1,88 @@
+local perv = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+-- services
+local ducksender = game:GetService("TweenService")
+local ducks = game:GetService("Players")
+-- Gui ..♡
+local notification = Instance.new("ScreenGui")
+notification.Name = "dont look"
+notification.ResetOnSpawn = false
+notification.Parent = ducks.LocalPlayer.PlayerGui
+local function CustomSendNotification(title, text, icon)
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0.4, 0, 0.2, 0)
+    frame.Position = UDim2.new(0.7, 0, 0.7, 0)
+    frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    frame.BackgroundTransparency = 0
+    frame.Parent = notification
+-- title
+    local damtitle = Instance.new("TextLabel")
+    damtitle.Size = UDim2.new(0.3, 0, 0.1, 0)
+    damtitle.Position = UDim2.new(-0.09, 0, 0.1, 0)
+    damtitle.Text = title
+    damtitle.Font = Enum.Font.AmaticSC
+    damtitle.TextSize = 35
+    damtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    damtitle.BackgroundTransparency = 1
+    damtitle.Parent = frame
+-- text
+    local damtext = Instance.new("TextLabel")
+    damtext.Size = UDim2.new(1, 0, 0.5, 0)
+    damtext.Position = UDim2.new(-0.03, 0, 0.3, 0)
+    damtext.Text = text
+    damtext.Font = Enum.Font.AmaticSC
+    damtext.TextSize = 30
+    damtext.TextColor3 = Color3.fromRGB(255, 255, 255)
+    damtext.BackgroundTransparency = 1
+    damtext.Parent = frame
+-- image
+    if icon then
+        local Image = Instance.new("ImageLabel")
+        Image.Size = UDim2.new(0.2, 0, 0.7, 0)
+        Image.Position = UDim2.new(0, 0, 0.32, 0)
+        Image.Image = icon
+        Image.BackgroundTransparency = 1
+        Image.Parent = frame
+    end
+local duckmeme = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0)
+    local ducker = ducksender:Create(frame, duckmeme, {Position = UDim2.new(0.70, 1, 0.6)})
+ducker:Play()
+wait(3)
+local duckmeme2 = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0)
+local ducker2 = ducksender:Create(frame, duckmeme2, {Position = UDim2.new(1, 0, 1)})
+ducker2:Play()
+end
+if game.Players.LocalPlayer._unlockedGloves.Fort.Value == true then
+  fireclickdetector(game.workspace.Lobby.Fort.ClickDetector)
+  wait(0.1)
+  local panel1 = Instance.new('ScreenGui')
+panel1.Parent = game.Players.LocalPlayer.PlayerGui
+panel1.IgnoreGuiInset = true
+--
+local F = Instance.new('Frame')
+F.Size = UDim2.new(1, 0, 1, 0)
+F.Parent = panel1
+F.BackgroundColor3 = Color3.new(255, 255, 255)
+-- 
+local png = Instance.new('ImageLabel')
+png.Size = UDim2.new(1, 0, 1, 0)
+png.Image = 'rbxassetid://7469562477'
+png.Parent = F
+-- loca
+local mus = Instance.new('Sound')
+mus.Volume = 10
+mus.SoundId = 'rbxassetid://5382576606'
+mus.Parent = game.Players.LocalPlayer
+mus:Play()
+wait(0.5)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25874.8262, 3012.95044, -662.327698, -0.0825617537, 0.146343201, -0.985782564, -7.17793753e-08, 0.989159584, 0.146844536, 0.996585965, 0.0121238139, -0.0816667452)
+  wait(1)
+  game:GetService("ReplicatedStorage").Fortlol:FireServer()
+wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = perv
+  firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Part, 0)
+  firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Part, 1)
+  wait(2.5)
+  panel1:Destroy()
+else
+  CustomSendNotification("info", "you dont own Fort", "rbxassetid://17105411523")
+end
